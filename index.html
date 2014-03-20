@@ -12,14 +12,15 @@
 	<script>
 		$(document).ready(function () {
 				//ajusta ancho del div mapa
-				AjustaPantalla();
+				//AjustaPantalla();
 
-				map = new GMaps({
-					div:"mapa",
-					lat: 20.600203, 
-					lng:-100.397669,
-					zoom: 11
-				});
+
+				//map = new GMaps({
+				//	div:"mapa",
+				//	lat: 20.600203, 
+				//	lng:-100.397669,
+				//	zoom: 11
+				//});
 
 				
 			});
@@ -39,38 +40,53 @@
 	<title> Ejemplo con mapas </title>
 </head>
 <body>
-	<div data-role="page">
+	<div data-role="page" id="uno">
+		<div data-role="header">
+			<h1>Red de Transporte Qro</h1>
+		</div>
+
+		<div data-role="content">
+			<li class="ui-field-contain">
+            <label for="select-choice-1" class="select">Selecciona la ruta:</label>
+            <select name="select-choice-1" id="select-choice-1">
+                <option value="10">10</option>
+                <option value="105">105</option>
+                <option value="110">110</option>
+                <option value="111">111</option>
+                <option value="12">12</option>
+                <option value="121">121</option>
+                <option value="122">122</option>
+                <option value="123">123</option>
+                <option value="125">125</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="17">17</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+           </select>
+        	</li>
+        	<h1>   
+
+
+
+        	</h1>
+        	<a href="index.html" data-role="button" data-icon="search" data-iconpos="right">Buscar...</a>
+		</div>
+
+		<div data-role="footer" data-position="fixed">
+			<h1>Cidesi</h1>
+		</div>
+
+	</div>
+
+	<div data-role="page2" id="dos">
 		<div data-role = "header">
 			<p>Ejemplo con mapas</p>
 
 		</div>
 
 		<div data-role = "content">
-			<li class="ui-field-contain">
-            <label for="select-choice-1" class="select">Selecciona la ruta a buscar:</label>
-            <select name="select-choice-1" id="select-choice-1">
-                <option value="standard">Standard: 7 day</option>
-                <option value="rush">Rush: 3 days</option>
-                <option value="express">Express: next day</option>
-                <option value="overnight">Overnight</option>
-                <option value="standard">Standard: 7 day</option>
-                <option value="rush">Rush: 3 days</option>
-                <option value="express">Express: next day</option>
-                <option value="overnight">Overnight</option>
-                <option value="standard">Standard: 7 day</option>
-                <option value="rush">Rush: 3 days</option>
-                <option value="express">Express: next day</option>
-                <option value="overnight">Overnight</option>
-                <option value="standard">Standard: 7 day</option>
-                <option value="rush">Rush: 3 days</option>
-                <option value="express">Express: next day</option>
-                <option value="overnight">Overnight</option>
-                <option value="standard">Standard: 7 day</option>
-                <option value="rush">Rush: 3 days</option>
-                <option value="express">Express: next day</option>
-                <option value="overnight">Overnight</option>
-            </select>
-        </li>
+			
 			<div id = "mapa" style = "height:400px; width:500px;"></div>
 
 		</div>
