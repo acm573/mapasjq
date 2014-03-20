@@ -11,13 +11,29 @@
 
 	<script>
 		$(document).ready(function () {
+				//ajusta ancho del div mapa
+				AjustaPantalla();
+
 				map = new GMaps({
 					div:"mapa",
 					lat: 20.600203, 
 					lng:-100.397669,
 					zoom: 11
 				});
+
+				
 			});
+
+		function AjustaPantalla()
+		{
+			//$("#mapa").width($(window).width());
+			ancho = $(window).width();
+			alto = $(window).height();
+			console.log("ancho = " + ancho);
+			console.log("alto = " + alto);
+			$("#mapa").width(ancho);
+			$("#mapa").height(alto);
+		}
 	</script>
 
 	<title> Ejemplo con mapas </title>
