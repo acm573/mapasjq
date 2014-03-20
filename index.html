@@ -12,15 +12,14 @@
 	<script>
 		$(document).ready(function () {
 				//ajusta ancho del div mapa
-				//AjustaPantalla();
+				AjustaPantalla();
 
-
-				//map = new GMaps({
-				//	div:"mapa",
-				//	lat: 20.600203, 
-				//	lng:-100.397669,
-				//	zoom: 11
-				//});
+				map = new GMaps({
+					div:"mapa",
+					lat: 20.600203, 
+					lng:-100.397669,
+					zoom: 11
+				});
 
 				
 			});
@@ -40,6 +39,8 @@
 	<title> Ejemplo con mapas </title>
 </head>
 <body>
+	
+
 	<div data-role="page" id="uno">
 		<div data-role="header">
 			<h1>Red de Transporte Qro</h1>
@@ -70,24 +71,23 @@
 
 
         	</h1>
-        	<a href="index.html" data-role="button" data-icon="search" data-iconpos="right">Buscar...</a>
+        	<a href="#dos" data-role="button" data-icon="search" data-iconpos="right">Buscar...</a>
 		</div>
 
-		<div data-role="footer" data-position="fixed">
+		<div data-role="dos" data-position="fixed">
 			<h1>Cidesi</h1>
 		</div>
 
 	</div>
 
-	<div data-role="page2" id="dos">
+	<div data-role="page" id="dos">
 		<div data-role = "header">
 			<p>Ejemplo con mapas</p>
 
 		</div>
 
-		<div data-role = "content">
-			
-			<div id = "mapa" style = "height:400px; width:500px;"></div>
+		<div data-role = "content">			
+			<div id="mapa" style = "height:400px; width:500px;"></div>
 
 		</div>
 
@@ -96,6 +96,8 @@
 		</div>
 
 	</div>
+
+	
 
 </body>
 </html>
