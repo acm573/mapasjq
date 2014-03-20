@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, user-scalable=no"/>
+	<script type="text/javascript" src="jquery-2.1.0.min.js"> </script>	
+	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+	<script type="text/javascript" src="gmaps.js"></script>
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
+	<script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+
+	<script>
+		$(document).ready(function () {
+				map = new GMaps({
+					div:"mapa",
+					lat: 20.600203, 
+					lng:-100.397669,
+					zoom: 11
+				});
+			});
+	</script>
+
+	<title> Ejemplo con mapas </title>
+</head>
+<body>
+	<div data-role="page">
+		<div data-role = "header">
+			<p>Ejemplo con mapas</p>
+
+		</div>
+
+		<div data-role = "content">
+			<div id = "mapa" style = "height:400px; width:500px;"></div>
+
+		</div>
+
+		<div data-role = "footer" data-position = "fixed">
+			<p>Cidesi</p>
+		</div>
+
+	</div>
+
+</body>
+</html>
