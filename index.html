@@ -12,9 +12,12 @@
 
 	<script>
 		$(document).ready(function () {
+			var opcion="ninguna";
+
 			$("#btnBuscar").click(function(){
 			    var val = $(".miLista").find(":selected").text();
-			    console.log("opcion seleccionada: " + val);
+			    opcion = val;
+			    console.log("opcion seleccionada: " + opcion);
 			    opcionSeleccionada(val);
 			});
 
@@ -48,7 +51,7 @@
 				  }
 				});
 
-				
+				document.getElementById('titPagina2').innerHTML = "Ubicación de ruta: "+opcion;
 			});
 
 			function AjustaPantalla()
@@ -56,9 +59,7 @@
 				var resultado;
 				ancho = $(window).width();
 				alto = $(window).height();
-				console.log("ancho = " + ancho);
-				console.log("alto = " + alto);
-				$("#mapa").width(ancho);
+				$("#mapa").width(ancho-50);
 				$("#mapa").height(alto);
 
 				resultado = tipo();
@@ -72,9 +73,9 @@
 	<title> Ejemplo con mapas </title>
 </head>
 <body>
-	<div data-role="page" id="uno">
+	<div data-role="page" id="uno" data-theme="a">
 		<div data-role="header">
-			<h1>Red de Transporte Qro</h1>
+			<h1>RedQ</h1>
 		</div>
 		<div data-role="content">
 			<li class="ui-field-contain">
@@ -96,7 +97,7 @@
                 <option value="20">20</option>
            </select>
         	</li>
-        	<a id = "btnBuscar" href="#dos" rel="external" data-role="button" data-icon="search" data-iconpos="right">Buscar...</a>
+        	<a id="btnBuscar" href="#dos" data-role="button" data-icon="search" data-iconpos="right" data-transition="slide">Buscar...</a>
 		</div>
 
 		<div data-role="footer" data-position="fixed">
@@ -104,10 +105,10 @@
 		</div>
 	</div>
 
-	<div data-role="page" id="dos">
+	<div data-role="page" id="dos" data-add-back-btn="true" data-back-btn-text="Regresar">
 		<div data-role = "header">
-			<a href="#uno" data-icon="back">Regresar</a>
-			<h1>Ubicación la ruta</h1>
+			<a href="#uno" data-icon="back" data-rel="back" title="Atrás">Atrás</a>
+			<h1 id="titPagina2">Ubicación</h1>
 		</div>
 
 		<div data-role = "content">			
@@ -115,7 +116,9 @@
 		</div>
 
 		<div data-role = "footer" data-position = "fixed">
-			<p>Cidesi</p>
+			<a href="dos.html" data-role="button" data-icon="plus">Reporte</a>
+			<a href="dos.html" data-role="button" data-icon="arrow-u">Notificación</a>
+			<a href="dos.html" data-role="button" data-icon="arrow-d">Opciones</a>
 		</div>
 	</div>
 
