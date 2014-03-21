@@ -11,33 +11,12 @@
 
 	<script>
 		$(document).ready(function () {
-				//ajusta ancho del div mapa
-				AjustaPantalla();
-
-				map = new GMaps({
-					div:"mapa",
-					lat: 20.600203, 
-					lng:-100.397669,
-					zoom: 11
-				});
-
-				$("#btnBuscar").click(function() {
-					//alert("hola!!!");
-					$.mobile.changePage('pagina2.html', { dataUrl : "pagina2.html?paremeter=123", data : { 'paremeter' : '123' }, reloadPage : true, changeHash : true});
-				});
-
+			$("#btnBuscar").click(function(){
+			    var val = $(".miLista").find(":selected").text();
+			    alert(val);
 			});
 
-		function AjustaPantalla()
-		{
-			//$("#mapa").width($(window).width());
-			ancho = $(window).width();
-			alto = $(window).height();
-			console.log("ancho = " + ancho);
-			console.log("alto = " + alto);
-			$("#mapa").width(ancho);
-			$("#mapa").height(alto);
-		}		
+		});
 	</script>
 
 	<title> Ejemplo con mapas </title>
@@ -53,7 +32,7 @@
 		<div data-role="content">
 			<li class="ui-field-contain">
             <label for="select-choice-1" class="select">Selecciona la ruta:</label>
-            <select name="select-choice-1" id="select-choice-1">
+            <select class="miLista" name="select-choice-1" id="lstRuta">
                 <option value="10">10</option>
                 <option value="105">105</option>
                 <option value="110">110</option>
@@ -70,7 +49,7 @@
                 <option value="20">20</option>
            </select>
         	</li>
-        	<a id="btnBuscar" data-role="button" data-icon="search" data-iconpos="right">Buscar...</a>
+        	<a id = "btnBuscar" href="pagina2.html" rel="external" data-role="button" data-icon="search" data-iconpos="right">Buscar...</a>
 		</div>
 
 		<div data-role="footer" data-position="fixed">
