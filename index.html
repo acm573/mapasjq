@@ -51,7 +51,7 @@
 				  }
 				});
 
-				document.getElementById('titPagina2').innerHTML = "Ubicación de ruta: "+opcion;
+				document.getElementById('titPagina2').innerHTML = "Ruta: "+opcion;
 			});
 
 			function AjustaPantalla()
@@ -78,8 +78,10 @@
 			<h1>RedQ</h1>
 		</div>
 		<div data-role="content">
+			<label for="search-basic">Search Input:</label>
+			<input type="search" name="search" id="searc-basic" value="" />
 			<li class="ui-field-contain">
-            <label for="select-choice-1" class="select">Selecciona la ruta:</label>
+            <label for="select-choice-1" class="select">Ruta:</label>
             <select class="miLista" name="select-choice-1" id="lstRuta">
                 <option value="10">10</option>
                 <option value="105">105</option>
@@ -116,9 +118,14 @@
 		</div>
 
 		<div data-role = "footer" data-position = "fixed">
-			<a href="dos.html" data-role="button" data-icon="plus">Reporte</a>
+			<fieldset class="ui-grid-a">
+				<div class="ui-block-a"><button type="submit" data-theme="d">Reporte</button></div>
+				<div class="ui-block-b"><button type="submit" data-theme="a">Notificar</button></div>
+				<div class="ui-block-b"><button type="submit" data-theme="a">Opciones</button></div>
+	    </fieldset>
+			<!-- <a href="dos.html" data-role="button" data-icon="plus">Reporte</a>
 			<a href="dos.html" data-role="button" data-icon="arrow-u">Notificación</a>
-			<a href="dos.html" data-role="button" data-icon="arrow-d">Opciones</a>
+			<a href="dos.html" data-role="button" data-icon="arrow-d">Opciones</a> -->
 		</div>
 	</div>
 
